@@ -1,7 +1,7 @@
 ---
 title: "Surprising results from a Reddit question."
 date: 2021-10-14T22:03:07+02:00
-draft: true
+draft: false
 ---
 
 {{< post/header >}}
