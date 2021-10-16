@@ -1,0 +1,99 @@
+<header class="absolute w-full z-30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-20">
+
+            <!-- Site branding -->
+            <div class="flex-shrink-0 mr-4">
+                <!-- Logo -->
+                <a class="block" href="/" aria-label="Disk Notifier">
+        		<img src="/images/logo.svg" class="w-8 h-8 fill-current" />
+                </a>
+            </div>
+
+            <!-- Desktop navigation -->
+            <nav class="hidden md:flex md:flex-grow">
+
+                <!-- Desktop menu links -->
+                <ul class="flex flex-grow justify-end flex-wrap items-center">
+                    <li>
+                        <a class="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out" href="/#features">Features</a>
+                    </li>
+                    <li>
+                        <a class="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out" href="/#pricing">Pricing</a>
+                    </li>
+                    <li>
+                        <a class="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out" href="/blog">Blog</a>
+                    </li>
+                    <li>
+                        <a class="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out" href="/about">About us</a>
+                    </li>
+                </ul>
+
+                <!-- Desktop sign in links -->
+                <ul class="flex flex-grow justify-end flex-wrap items-center">
+                    <li>
+                        <a class="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://app.disknotifier.com/users/sign_in">Sign in</a>
+                    </li>
+                    <li>
+                        <a class="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3" href="https://app.disknotifier.com/users/sign_up">Sign up</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <!-- Mobile menu -->
+            <div class="md:hidden" x-data="{ expanded: false }">
+
+                <!-- Hamburger button -->
+                <button
+                    class="hamburger"
+                    :class="{ 'active': expanded }"
+                    @click.stop="expanded = !expanded"
+                    aria-controls="mobile-nav"
+                    :aria-expanded="expanded"
+                >
+                    <span class="sr-only">Menu</span>
+                    <svg class="w-6 h-6 fill-current text-gray-300 hover:text-gray-200 transition duration-150 ease-in-out" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="4" width="24" height="2" rx="1" />
+                        <rect y="11" width="24" height="2" rx="1" />
+                        <rect y="18" width="24" height="2" rx="1" />
+                    </svg>
+                </button>
+
+                <!-- Mobile navigation -->
+                <nav
+                    id="mobile-nav"
+                    class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out"
+                    x-ref="mobileNav"
+                    :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'"
+                    @click.away="expanded = false"
+                    @keydown.escape.window="expanded = false"
+                    x-cloak
+                >
+                    <ul class="bg-gray-800 px-4 py-2">
+                        <li>
+                            <a class="flex text-gray-300 hover:text-gray-200 py-2" href="https://disknotifier.com#features">Features</a>
+                        </li>
+                        <li>
+                            <a class="flex text-gray-300 hover:text-gray-200 py-2" href="https://disknotifier.com#pricing">Pricing</a>
+                        </li>
+                        <li>
+                            <a class="flex text-gray-300 hover:text-gray-200 py-2" href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a class="flex text-gray-300 hover:text-gray-200 py-2" href="about.html">About us</a>
+                        </li>
+                        <li>
+                            <a class="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center" href="https://app.disknotifier.com/users/sign_in">Sign in</a>
+                        </li>
+                        <li>
+                            <a class="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-white bg-purple-600 hover:bg-purple-700 transition duration-150 ease-in-out" href="https://app.disknotifier.com/users/sign_up">Sign up</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+    </div>
+</header>

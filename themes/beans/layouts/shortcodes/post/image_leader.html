@@ -1,0 +1,6 @@
+<!-- Article image -->
+<figure class="mb-8 lg:-ml-32 lg:-mr-32" data-aos="fade-up" data-aos-delay="600">
+    {{ $image := .Page.Resources.GetMatch (.Get "src") }}
+    <img class="w-full" src="{{ ($image.Resize "1024x576").RelPermalink }}" width="1024" height="576" alt="{{ .Get `alt` }}" />
+    <figcaption class="text-sm text-center text-gray-500 mt-3">{{ .Get "caption" }}</figcaption>
+</figure>
