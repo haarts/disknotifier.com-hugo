@@ -6,7 +6,7 @@ draft: false
 
 {{< post/header >}}
 
-    {{< post/title_and_excerpt title=.Title excerpt="'What do you use to manage your home server?' was the question posted on Reddit. Turns out SSH reigns supreme." >}}
+    {{< post/title_and_excerpt excerpt="'What do you use to manage your home server?' was the question posted on Reddit. Turns out SSH reigns supreme." >}}
 
     {{< post/meta >}}
 
