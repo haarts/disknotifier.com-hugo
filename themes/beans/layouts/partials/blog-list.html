@@ -59,8 +59,8 @@
                 <!-- Articles container -->
                 <div class="grid gap-12 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
 
-                    {{ $pages := .Pages }}
-                    {{ if eq .Kind "taxonomy" }}
+                    {{ $pages := where .Pages "Section" "blog" }}
+                    {{ if eq .Kind "term" }}
                     {{ $pages = .Data.Pages }}
                     {{ end }}
                     {{ range $pages }}
