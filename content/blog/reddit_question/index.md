@@ -1,18 +1,25 @@
 ---
 title: "Surprising results from a Reddit question."
+excerpt: "'What do you use to manage your home server?' was the question posted on Reddit. Turns out SSH reigns supreme."
 date: 2021-10-14T22:03:07+02:00
+tags:
+- SSH
+- Insight
 draft: false
+image_leader:
+  src: "lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
+  alt: "SSH home server management"
 ---
 
 {{< post/header >}}
 
-    {{< post/title_and_excerpt excerpt="'What do you use to manage your home server?' was the question posted on Reddit. Turns out SSH reigns supreme." >}}
+    {{< post/title_and_excerpt >}}
 
     {{< post/meta >}}
 
 {{< /post/header >}}
 
-{{< post/image_leader src="lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg" caption="Photo by Lorenzo Herrera on Unsplash" alt="SSH home server management" >}}
+{{< post/image_leader caption="Photo by Lorenzo Herrera on Unsplash" >}}
 
 {{% post/content %}}
 

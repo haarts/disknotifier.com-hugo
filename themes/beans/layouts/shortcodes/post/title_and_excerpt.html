@@ -1,5 +1,5 @@
 <!-- Title and excerpt -->
 <div class="text-center md:text-left">
-    <h1 class="h1 mb-4" data-aos="fade-up">{{ default .Page.Title (.Get "title") }}</h1>
-    <p class="text-xl text-gray-400" data-aos="fade-up" data-aos-delay="200">{{ .Get "excerpt" }}</p>
+    <h1 class="h1 mb-4" data-aos="fade-up">{{ .Page.Title }}</h1>
+    <p class="text-xl text-gray-400" data-aos="fade-up" data-aos-delay="200">{{ .Page.Params.except }}</p>
 </div>
