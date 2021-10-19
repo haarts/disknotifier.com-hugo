@@ -23,7 +23,7 @@ image_leader:
 
 {{% post/content %}}
 
-The other week I posted a question on <a class="text-gray-200 underline hover:no-underline" href="https://www.reddit.com/r/selfhosted/comments/q1wobo/how_many_of_you_use_ssh_to_manage_your_server/">r/selfhosted</a>. The question was simple:
+The other week I posted a question on [r/selfhosted](https://www.reddit.com/r/selfhosted/comments/q1wobo/how_many_of_you_use_ssh_to_manage_your_server/). The question was simple:
 
 > How many of you use SSH to manage your server?
 
@@ -33,15 +33,15 @@ The post gathered over 500 comments and I thought it'd be insightful to summariz
 
 ### Clear winner
 
-Reddit is kind enough to expose an API, and after twiddling around for half an hour, I could download the entire thread as a JSON document. Then, together with <a class="text-gray-200 underline hover:no-underline" href="https://stedolan.github.io/jq/" >jq</a>, I did some rudimentary analysis. Out of the 186 top-level comments, 154 said they use SSH to access their home server. That's more than 82%!
+Reddit is kind enough to expose an API, and after twiddling around for half an hour, I could download the entire thread as a JSON document. Then, together with [jq](https://stedolan.github.io/jq/), I did some rudimentary analysis. Out of the 186 top-level comments, 154 said they use SSH to access their home server. That's more than 82%!
 
-It is essential to say that SSH is exclusively used to manage Linux home servers. Windows machines are all managed with <a class="text-gray-200 underline hover:no-underline" href="https://docs.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol">RDP<a/>. But only a  fraction of the r/selfhosted community members are using Windows machines, just under 5%.
+It is essential to say that SSH is exclusively used to manage Linux home servers. Windows machines are all managed with [RDP](https://docs.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol). But only a  fraction of the r/selfhosted community members are using Windows machines, just under 5%.
 
 #### Alternatives
 
-What I expected to people using more were things like the Linux equivalent of a remote desktop. A solution based on <a class="text-gray-200 underline hover:no-underline" href="https://www.raspberrypi.com/documentation/computers/remote-access.html#vnc">VNC</a>, for example. However, there are RDP solutions for Linux as well.
+What I expected to people using more were things like the Linux equivalent of a remote desktop. A solution based on [VNC](https://www.raspberrypi.com/documentation/computers/remote-access.html#vnc), for example. However, there are RDP solutions for Linux as well.
 
-Another option I thought would be popular would be webUIs to administer a server, like <a class="text-gray-200 underline hover:no-underline" href="https://www.plesk.com/">Plesk</a>. But I've read all 500+ comments, and none of them mentions anything like that. So it seems I was just dead wrong there.
+Another option I thought would be popular would be webUIs to administer a server, like [Plesk](https://www.plesk.com/). But I've read all 500+ comments, and none of them mentions anything like that. So it seems I was just dead wrong there.
 
 #### VPNs
 
@@ -55,11 +55,11 @@ When it comes to SSH, almost everybody follows these security practices:
 - they disable password login and use key-based authentication only
 - run the SSH daemon on a different port than 22
 
-The last point is under <a class="text-gray-200 underline hover:no-underline" href="https://security.stackexchange.com/questions/32308/should-i-change-the-default-ssh-port-on-linux-servers">some debate</a> if it yields a security benefit, but it indeed prevents your logs from being filled up with nonsense!
+The last point is under [some debate](https://security.stackexchange.com/questions/32308/should-i-change-the-default-ssh-port-on-linux-servers) if it yields a security benefit, but it indeed prevents your logs from being filled up with nonsense!
 
-A good number of people (almost 8%) also report using <a class="text-gray-200 underline hover:no-underline" href="https://www.fail2ban.org/wiki/index.php/Main_Page">fail2ban</a> to secure their network further. I have the experience that fail2ban is indeed easy to set up, getting that extra bit of security with little overhead.
+A good number of people (almost 8%) also report using [fail2ban](https://mosh.org/) to secure their network further. I have the experience that fail2ban is indeed easy to set up, getting that extra bit of security with little overhead.
 
-Securing SSH is not an easy task, and it will be the subject of a future post. But I like the advice given in this <a class="text-gray-200 underline hover:no-underline" href="https://stribika.github.io/2015/01/04/secure-secure-shell.html">blog post</a>. For a quick scan of how your SSH looks like to the outside world, try <a class="text-gray-200 underline hover:no-underline" href="https://www.ssh-audit.com/">ssh-audit.com</a>. That website is using on the open-source <a class="text-gray-200 underline hover:no-underline" href="https://github.com/jtesta/ssh-audit">ssh-audit</a> software.
+Securing SSH is not an easy task, and it will be the subject of a future post. But I like the advice given in this [blog post](https://stribika.github.io/2015/01/04/secure-secure-shell.html). For a quick scan of how your SSH looks like to the outside world, try [ssh-audit.com](https://www.ssh-audit.com/). That website is using on the open-source [ssh-audit](https://github.com/jtesta/ssh-audit) software.
 
 I had fun reading all the comments and learned a good deal. Thanks!
 
