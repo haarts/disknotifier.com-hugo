@@ -8,7 +8,7 @@ image_leader:
   src: "maria-vojtovicova-SPvJPDXEmqA-unsplash.jpg"
   alt: "Finland, land of the Linux Gods"
 date: 2021-10-19T20:39:45+02:00
-draft: true
+draft: false
 ---
 
 {{< post/header >}}
