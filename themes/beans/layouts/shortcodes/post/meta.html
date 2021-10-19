@@ -15,12 +15,11 @@
     <!-- Article tags -->
     <div class="flex justify-center mt-4 md:mt-0" data-aos="fade-up" data-aos-delay="600">
         <ul class="flex flex-wrap text-xs font-medium -m-1">
+            {{ range .Page.Params.tags }}
             <li class="m-1">
-                <a class="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-purple-600 hover:bg-purple-700 transition duration-150 ease-in-out" href="#0">Insight</a>
+                <a class="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-purple-600 hover:bg-purple-700 transition duration-150 ease-in-out" href="/tags/{{ . | urlize }}">{{ . }}</a>
             </li>
-            <li class="m-1">
-                <a class="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-blue-500 hover:bg-blue-600 transition duration-150 ease-in-out" href="#0">SSH</a>
-            </li>
+            {{ end }}
         </ul>
     </div>
 </div>
