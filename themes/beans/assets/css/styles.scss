@@ -46,6 +46,6 @@ article div.content ul {
     @apply list-disc list-inside mb-8;
 }
 
-article a {
+article div.content a {
     @apply text-gray-200 underline hover:no-underline;
 }
