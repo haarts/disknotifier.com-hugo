@@ -1,5 +1,6 @@
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Disk Notifier - Disk space monitoring made easy</title>
 
     {{ $styles := resources.Get "css/styles.scss" | toCSS (dict "includePaths" (slice "node_modules")) | postCSS (dict "config" "./assets/css/postcss.config.js") }}
