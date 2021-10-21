@@ -2,6 +2,8 @@ baseURL = 'https://stoic-brown-842f62.netlify.app/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "beans"
+enableGitInfo = true
+
 [build]
   writeStats = true
 

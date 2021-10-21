@@ -1,0 +1,24 @@
+{{ define "main" }}
+    <!-- Page illustration -->
+    <div class="relative max-w-6xl mx-auto h-0 pointer-events-none" aria-hidden="true">
+        {{ partial "page-illustration.html" . }}
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="pt-32 pb-12 md:pt-40 md:pb-20">
+            <div x-data="{ page: '1' }" class="flex flex-col md:flex-row">
+
+                <!-- Main content -->
+                <main class="md:flex-auto md:pl-10 order-1" data-aos="fade-up">
+                    {{ partial "faq/faq.html" . }}
+                    {{ partial "faq/what-is-disk-notifier.html" . }}
+                    {{ partial "faq/features.html" . }}
+                    {{ partial "faq/getting-started.html" . }}
+                    {{ partial "faq/payments.html" . }}
+                </main>
+                {{ partial "faq/nav-bar.html" . }}
+            </div>
+        </div>
+    </div>
+
+{{ end }}
