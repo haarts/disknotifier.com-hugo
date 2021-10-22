@@ -7,31 +7,41 @@
     <ul class="-my-4">
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">Is it safe?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">
+                Is SSH safe? Because that is what we are using to connect to your server. We are using the best in class ed25519 keys, not a low bit RSA key.
+                After we've establish a connection we run ONE command, and that is `df`. That command has been around since 1971 and is present on all Unix based systems.
+                We didn't stop there. The snippet we are giving you enables a feature called 'forced command' in SSH.
+                This allows the public key to ONLY execute the specified command after which the connection is immediately terminated.
+            </p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">Why do you think it is safer than the altertives?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">
+                All the other solutions require you to install software. That increases your attack surface. There have been numorous examples in which NPM packages are compromised.
+                Even 'fail2ban' issued a CVE last year!
+                Installing additional software is a hazzard but it get worse because you need to update it too. Sure, there's 'unattended-upgrades', yet an other thing to install and don't forget these reboots!
+                Last but not least; when you need to pull data from the monitored server you need to expose an additional port. Less ports open is always better.
+            </p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">What are the altertives anyway?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">Popular at the moment are Graphana and to a lesser extent Telegraph from InfluxDB. Venerable solutions are Zabbix and Nagios. Slightly newer is Icinga and a recent entrant is NetData.</p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">Can I cancel my subscription at any time?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">I dislike subscriptions as much as the next guy. Yes you can cancel any time.</p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">Is there a discount when paid annually?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">Yep.</p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">What happens if I don’t renew my license?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">When that happens monitoring of all but one of your servers will stop. Once you inevitably see that you have made a mistake and sign up again, monitoring will resume.</p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">What kind of payment methods do you provide?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">Anything Stripe offers. Plus Bitcoin. Email me when you want to do that.</p>
         </li>
     </ul>
 </div>

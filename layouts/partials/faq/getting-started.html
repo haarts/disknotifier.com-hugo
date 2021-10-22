@@ -10,24 +10,32 @@
             <p class="text-lg text-gray-400">You really have to ask?</p>
         </li>
         <li class="py-4">
-            <h4 class="text-xl font-medium mb-2">I have a server, how do I let Disk Notifier about it?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <h4 class="text-xl font-medium mb-2">I have a server, how do I let Disk Notifier know about it?</h4>
+            <p class="text-lg text-gray-400">
+                Go to the 'Servers' tab when you are logged in. Enter the following info:
+            </p>
+            <ul>
+                <li>Host: The IP address or the domain name of your server.
+                <li>Remote user: The user you allow us to log in with. This can be a dedicated user you created for this purpose or an exsisting one.
+                <li>Port: The port SSH is running on. Usually '22'.
+            </ul>
+
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">How do I add Disk Notifiers key to my server?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">Easy. Once you added your server on Disk Notifier you get a small snippet from us. That snippet includes a forced command, a public key and a comment. You need to add this snippet to your <code>~/.ssh/authorized_keys</code>. That is it.</p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">How do I revoke access to my server?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">Delete the line containing our public key in the <code>~/.ssh/authorized_keys</code> file.</p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">I want to receive alerts on Telegram. How do I do that?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">Log in and go to your users Settings. There you'll find a short instruction on how to link with our Telegram bot.</p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">How do I suspend monitoring?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">At the moment? You don't. Delete your server. Or remove the public key on your server, you can add it back later.</p>
         </li>
     </ul>
 </div>

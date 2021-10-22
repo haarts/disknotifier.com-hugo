@@ -2,24 +2,41 @@
 <div x-show="page === '2'">
     <div class="mb-8">
         <h2 class="h2 mb-4">What is Disk Notifier</h2>
-        <p class="text-gray-400">Last updated - <span class="text-purple-600">{{ .Lastmod }}</span></p>
+        <p class="text-gray-400">Last updated - <span class="text-purple-600">{{ .Lastmod | time.Format ":date_medium" }}</span></p>
     </div>
     <ul class="-my-4">
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">What is Disk Notifier?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">
+                A service which alerts you when you are about to run out of disk space.
+                Thus preventing downtime and costing you stress and money.
+            </p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">What isn't Disk Notifier?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">
+                Disk Notifier isn't for you if you need a whole lot of cool looking graphs.
+                We focus on the bare minimum.
+            </p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">Why did you start Disk Notifier?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">
+                A project of mine to scratch my own itch.
+                In my career as a software developer I've seen some nasty incidents where a server went down. It was always a full disk.
+                This is easy to prevent in principle, it just never happens. As a developer you are always late or busy.
+                Monitoring and let alone alerting is just not something you have time for.
+                That's why Disk Notifier. Dead simple disk monitoring.
+            </p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">What technology is Disk Notifier using?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">
+                We are using a Rails backend with several, pardon the word, micro services. These are writting in Crystal.
+                The static sales website is written with Hugo.
+                Our database is the venerable Postgres and we use Redis as a message bus.
+                The micro services run on a dedicated machine and the sales website runs on Netlify. The Rails backend runs on Render.com.
+            </p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">What architecture is Disk Notifier using?</h4>
@@ -27,11 +44,11 @@
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">Who's behind Disk Notifier?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">Harm Aarts. A pretty good developer.</p>
         </li>
         <li class="py-4">
             <h4 class="text-xl font-medium mb-2">How long do you plan do be running Disk Notifier?</h4>
-            <p class="text-lg text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p>
+            <p class="text-lg text-gray-400">For a long time actually. I want this to stick.</p>
         </li>
     </ul>
 </div>
