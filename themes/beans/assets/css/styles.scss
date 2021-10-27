@@ -34,6 +34,10 @@ article blockquote {
     @apply italic pl-4 border-l-2 border-gray-200 mb-8;
 }
 
+article h2 {
+    @apply h3 mb-4 text-gray-200;
+}
+
 article h3 {
     @apply h3 mb-4 text-gray-200;
 }
