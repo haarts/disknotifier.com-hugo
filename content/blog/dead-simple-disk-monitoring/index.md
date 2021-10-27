@@ -1,7 +1,7 @@
 ---
 title: "Dead Simple Disk Monitoring"
 date: 2021-10-22T21:52:21+02:00
-draft: true
+draft: false
 tags:
 - SSH
 - Security
@@ -11,6 +11,7 @@ image_leader:
   src: "michael-dziedzic-deHhHOttSdk-unsplash.jpg"
   alt: "Get with the program. 5 easy steps to disk space alerts"
 excerpt: "Here's an indepth explainer how Disk Notifier works and why it is more secure than anything else."
+publishdate: 2021-11-06
 ---
 
 {{< post/header >}}
