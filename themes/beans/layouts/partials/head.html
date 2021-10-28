@@ -10,7 +10,6 @@
       {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
       <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     {{ end }}
-    <link rel="canonical" href="https://disknotifier.com" />
     {{ $built := resources.Get "js/main.js" | js.Build }}
     <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
 
