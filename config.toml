@@ -1,11 +1,15 @@
 baseURL = 'https://disknotifier.com/'
 languageCode = 'en-us'
-title = 'Disk Notifier - Disk space monitoring made easy'
+title = 'Disk Notifier'
 theme = "beans"
 enableGitInfo = true
+summaryLength = 20
 
 [build]
   writeStats = true
+
+[params]
+  description = "Monitor disk space on your Linux server in one step. Get timely alerts when a disk is almost full."
 
 [markup]
   [markup.goldmark]
