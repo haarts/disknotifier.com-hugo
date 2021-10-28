@@ -1,6 +1,6 @@
-baseURL = 'https://stoic-brown-842f62.netlify.app/'
+baseURL = 'https://disknotifier.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Disk Notifier - Disk space monitoring made easy'
 theme = "beans"
 enableGitInfo = true
 
