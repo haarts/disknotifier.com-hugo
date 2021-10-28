@@ -2,5 +2,5 @@
   HUGO_VERSION = "0.88.1"
 [[redirects]]
   from = "/blog-post-reddit-question.html"
-  to = "/blog/reddit_question"
+  to = "/blog/reddit_question/"
   status = 301

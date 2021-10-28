@@ -17,7 +17,7 @@
         <ul class="flex flex-wrap text-xs font-medium -m-1">
             {{ range .Page.Params.tags }}
             <li class="m-1">
-                <a class="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-purple-600 hover:bg-purple-700 transition duration-150 ease-in-out" href="/tags/{{ . | urlize }}">{{ . }}</a>
+                <a class="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-purple-600 hover:bg-purple-700 transition duration-150 ease-in-out" href="/tags/{{ . | urlize }}/">{{ . }}</a>
             </li>
             {{ end }}
         </ul>
