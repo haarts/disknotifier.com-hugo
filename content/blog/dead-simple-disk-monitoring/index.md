@@ -1,6 +1,6 @@
 ---
 title: "Dead Simple Disk Monitoring"
-date: 2021-10-22T21:52:21+02:00
+date: 2021-11-06T21:52:21+02:00
 draft: false
 tags:
 - SSH
