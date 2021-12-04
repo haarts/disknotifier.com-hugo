@@ -2,7 +2,7 @@
 <div x-show="page === '4'">
     <div class="mb-8">
         <h2 class="h2 mb-4">Get started</h2>
-        <p class="text-gray-400">Last updated - <span class="text-purple-600">June 30, 2020</span></p>
+        <p class="text-gray-400">Last updated - <span class="text-purple-600">{{ .Lastmod | time.Format ":date_medium" }}</span></p>
     </div>
     <ul class="-my-4">
         <li class="py-4">
