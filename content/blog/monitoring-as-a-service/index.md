@@ -35,7 +35,7 @@ With a SaaS solution, you are always up to date. When you subscribe, the provide
 
 With monitoring as a service, the story is a bit more nuanced. It's not like you create a user account, and you are off to the races. Instead, you need to install a so-called 'agent' on each machine you want monitoring.
 This agent needs to be updated periodically, and when the service pulls data (like Prometheus), you need to open a firewall port. 
-All unless, of course, you are using Disk Notifier. There is no agent to be installed, and no new ports need to be open! [Read](http://disknotifier.com/blog/dead-simple-disk-monitoring/) how this works.
+All unless, of course, you are using Disk Notifier. There is no agent to be installed, and no new ports need to be open! [Read](https://disknotifier.com/blog/dead-simple-disk-monitoring/) how this works.
 
 ## Predictable costs
 
