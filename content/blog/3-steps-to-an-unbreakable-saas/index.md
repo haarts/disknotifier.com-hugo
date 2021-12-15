@@ -30,7 +30,7 @@ Software breaks all the time. A bug brings the database to its knees, or a viral
 It is tempting to bang out those features and go full steam ahead. Some programming languages make you fly over that happy path. Javascript is an excellent example of this. Got a user input that you need as a number? No problem. Some `parseInt` and be done with it. The risk is evident, of course. What if the user doesn't enter an actual int? A double, perhaps? Or not a number at all. What do you do about that leading whitespace?
 Rust takes the opposite approach. You need to handle every edge case. How many bytes does your int take? Signed or unsigned? You'd better not make any assumptions about the input.
 
-It pays to stop and think about how your software can fail. Then, what will you do when it fails? For example, at Disk Notifier, we have multiple backend workers. All of them can fail. When they die, we restart them automatically (with SystemD) and forward the error to [HoneyBadger](https://honeybadger.com). Half of the time, some user input had an unexpected value, or some network was temporarily down.
+It pays to stop and think about how your software can fail. Then, what will you do when it fails? For example, at Disk Notifier, we have multiple backend workers. All of them can fail. When they die, we restart them automatically (with SystemD) and forward the error to [HoneyBadger](https://honeybadger.io). Half of the time, some user input had an unexpected value, or some network was temporarily down.
 It is hard to grasp SystemD at first. But after the first Unit file, the others are quick to write.
 
 ## Build redundant systems (or don't run on your software)
