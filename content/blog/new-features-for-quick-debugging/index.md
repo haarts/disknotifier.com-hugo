@@ -6,7 +6,7 @@ tags:
 image_leader:
   src: "jezael-melgoza-2FiXtdnVhjQ-unsplash.jpg"
   alt: "Whether it is a Debian, AlmaLinux or Ubuntu disk. Monitoring them is now easier."
-date: 2021-12-14T21:03:53+01:00
+date: 2022-01-08T21:03:53+01:00
 draft: false
 publishdate: 2022-01-08
 ---
