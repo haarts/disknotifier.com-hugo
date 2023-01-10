@@ -1,6 +1,7 @@
 module.exports = {
-  purge: [
-    'src/**/*.html',
+  content: [
+    './**/*.html',
+    './js/**/*.js',
   ],
   theme: {
     extend: {
@@ -36,7 +37,6 @@ module.exports = {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
         'architects-daughter': ['"Architects Daughter"', 'sans-serif'],
-        audiowide: ['Audiowide', 'cursive']
       },
       fontSize: {
         xs: '0.75rem',
@@ -51,7 +51,7 @@ module.exports = {
         '6xl': '4rem',
       },
       inset: {
-        'full': '100%',
+        full: '100%',
       },
       letterSpacing: {
         tighter: '-0.02em',
@@ -62,21 +62,15 @@ module.exports = {
         widest: '0.4em',
       },
       minWidth: {
-        '10': '2.5rem',
+        10: '2.5rem',
       },
       scale: {
-        '98': '.98'
+        98: '.98',
       },
     },
   },
-  variants: {
-    backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
-    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
-    translate: ['responsive', 'hover', 'focus', 'group-hover'],
-    boxShadow: ['responsive', 'hover', 'focus', 'focus-within'],
-    opacity: ['responsive', 'hover', 'focus', 'group-hover'],
-  },
   plugins: [
+    // eslint-disable-next-line global-require
     require('@tailwindcss/forms'),
   ],
 };

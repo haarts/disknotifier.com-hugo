@@ -6,11 +6,17 @@
         <div class="flex flex-col min-h-screen overflow-hidden">
             {{- partial "header.html" . -}}
             <!-- Page content -->
-            <main class="flex-grow">
+            <main class="grow">
                 {{- block "main" . }}{{- end }}
             </main>
             {{- partial "footer.html" . -}}
         </div>
+
+        <script type="text/javascript" src="/js/vendors/alpinejs.min.js" defer></script>
+        <script type="text/javascript" src="/js/vendors/aos.js"></script>
+        {{ $built := resources.Get "js/main.js" | js.Build }}
+        <script type="text/javascript" src="{{ $built.RelPermalink }}"></script>
+
         <script data-mode="hash" async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
         <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
     </body>

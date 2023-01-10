@@ -1,6 +1,6 @@
 <section class="relative" id="pricing">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="pt-12 pb-12 md:pt-15 md:pb-10">
+        <div class="pt-32 pb-12 md:pt-40 md:pb-20">
 
             <!-- Section header -->
             <div class="max-w-3xl mx-auto text-center pb-12">
@@ -9,13 +9,13 @@
             </div>
 
             <!-- Pricing tables -->
-            <div x-data="pricingSwitch()">
+            <div x-data="pricingSwitch">
 
                 <!-- Pricing toggle -->
                 <div class="flex justify-center mb-16" data-aos="fade-up" data-aos-delay="400">
                     <div class="inline-flex items-center">
                         <div class="text-gray-500 font-medium mr-3">Billed Monthly</div>
-                        <div class="form-switch focus-within:shadow-outline">
+                        <div class="form-switch">
                             <input type="checkbox" name="pricing-toggle" id="pricing-toggle" class="sr-only" x-model="value" />
                             <label class="bg-gray-600" for="pricing-toggle">
                                 <span class="bg-gray-200" aria-hidden="true"></span>
@@ -40,7 +40,7 @@
                             <div class="text-gray-400">Monitor a single server. Great to get started and no strings attached.</div>
                         </div>
                         <div class="font-medium mb-3">Features include:</div>
-                        <ul class="text-gray-400 -mb-3 flex-grow">
+                        <ul class="text-gray-400 -mb-3 grow">
                             <li class="flex items-center mb-3">
                                 <svg class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
@@ -86,7 +86,7 @@
                             <div class="text-gray-400">You mean business and can now monitor up to 5 servers.</div>
                         </div>
                         <div class="font-medium mb-3">All features of Free-rider plus:</div>
-                        <ul class="text-gray-400 -mb-3 flex-grow">
+                        <ul class="text-gray-400 -mb-3 grow">
                             <li class="flex items-center mb-3">
                                 <svg class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
@@ -117,7 +117,7 @@
                             <div class="text-gray-400">You are a part of the fabric of society, going down is not an option.</div>
                         </div>
                         <div class="font-medium mb-3">All features of Noodle shop plus:</div>
-                        <ul class="text-gray-400 -mb-3 flex-grow">
+                        <ul class="text-gray-400 -mb-3 grow">
                             <li class="flex items-center mb-3">
                                 <svg class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
@@ -144,9 +144,9 @@
 
             <!-- Pricing toggle data -->
             <script>
-                function pricingSwitch() {
-                    return {
-                        value: false,
+                document.addEventListener('alpine:init', () => {
+                    Alpine.data('pricingSwitch', () => ({
+                        value: true,
                         priceOutput: {
                             plan1: {
                                 false: ['$', '0', '/mo'],
@@ -161,8 +161,8 @@
                                 true: ['$', '350', '/y']
                             }
                         }
-                    }
-                }
+                    }))
+                })
             </script>
 
         </div>

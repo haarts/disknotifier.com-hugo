@@ -3,23 +3,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
 
-    {{ $styles := resources.Get "css/styles.scss" | toCSS (dict "includePaths" (slice "node_modules")) | postCSS (dict "config" "./assets/css/postcss.config.js") }}
+    {{ $css := resources.Get "css/style.css" }}
     {{ if .Site.IsServer }}
-      <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
     {{ else }}
-      {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
-      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+    {{ $css = $css | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
     {{ end }}
-    {{ $built := resources.Get "js/main.js" | js.Build }}
-    <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
+    {{ $aos := resources.Get "css/vendors/aos.css" }}
+    <link rel="stylesheet" href="{{ $aos.RelPermalink }}" rel="stylesheet">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
     <meta name="description" content="{{ with .Description}}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
     <link rel="canonical" href="{{ .Permalink }}" />
 </head>
