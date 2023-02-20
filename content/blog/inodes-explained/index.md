@@ -23,11 +23,19 @@ draft: false
 
 {{% post/content %}}
 
+## inodes store metadata
+
 Linux inodes are data structures that are used to store information about files and directories on a Linux file system. An inode is a fixed-size data structure that contains information about a file or directory, such as its size, permissions, and the location of its data on the disk.
+
+## one file, one inode
 
 Each file and directory on a Linux file system has its own inode, which is identified by a unique inode number. The inode number is used to access the inode, which contains all the information about the file or directory. Inodes do not contain the actual data of the file or directory, but they do contain pointers to the data blocks on the disk where the data is stored.
 
-Inodes are created when a file or directory is created, and they are deleted when the file or directory is deleted. The number of inodes on a file system is set when the file system is created, and it cannot be changed later. This means that it is important to choose the appropriate number of inodes for a file system based on the expected number of files and directories that will be created on the file system.
+## amount of inodes are static
+
+Inodes are created when a file or directory is created, and they are deleted when the file or directory is deleted. The number of inodes on a file system is set when the file system is created, and it cannot be changed later. This means that it is important to choose the appropriate number of inodes for a file system based on the expected number of files and directories that will be created on the file system. This is why ut pays to keep an eye on the inodes! You can have disk space remaining but simply ran out of inodes. This happens when writing many tiny files.
+
+## inode content
 
 The information stored in an inode includes the following:
 
